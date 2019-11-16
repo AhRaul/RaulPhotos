@@ -19,6 +19,7 @@ public class ImageCache {
 
     }
 
+
     public File getImagePath(String fileName) {
         return new File(Environment.getExternalStorageDirectory() + File.separator + APP_FOLDER + File.separator + fileName + ".png");
     }
