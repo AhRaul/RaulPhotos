@@ -8,10 +8,10 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.raulakhmedzianov.raulphotos.model.photoload.entity.Photo;
+import ru.raulakhmedzianov.raulphotos.model.photoload.entity.HitList;
 
 public class ApiHelper {
-    public Observable<Photo> requestServer() {
+    public Observable<HitList> requestServer() {
 
         Gson gson = new GsonBuilder()
                 .excludeFieldsWithoutExposeAnnotation()

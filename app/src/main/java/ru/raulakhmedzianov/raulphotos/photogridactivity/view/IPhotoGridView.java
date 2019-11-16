@@ -12,4 +12,7 @@ public interface IPhotoGridView extends MvpView {
 
     @StateStrategyType(value = AddToEndStrategy.class)
     void updateRecyclerView();
+
+    @StateStrategyType(value = SkipStrategy.class)
+    void showPhotoFromStorage(String login);
 }

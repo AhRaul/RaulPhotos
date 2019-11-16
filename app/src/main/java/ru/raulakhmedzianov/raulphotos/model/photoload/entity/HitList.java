@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Photo {
+public class HitList {
 
     @Expose
     @SerializedName("totalHits")

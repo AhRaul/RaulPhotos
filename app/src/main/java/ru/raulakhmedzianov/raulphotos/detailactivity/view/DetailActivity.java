@@ -1,6 +1,7 @@
 package ru.raulakhmedzianov.raulphotos.detailactivity.view;
 
-import androidx.appcompat.app.AppCompatActivity;
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import moxy.MvpAppCompatActivity;
 import moxy.presenter.InjectPresenter;
 import ru.raulakhmedzianov.raulphotos.R;
@@ -18,13 +19,16 @@ public class DetailActivity extends MvpAppCompatActivity implements IDetailView 
     @InjectPresenter
     DetailPresenter detailPresenter;
 
+    @BindView(R.id.imageViewDetail)
+    ImageView imageView;
+
     private GlideLoader glideLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        ImageView imageView = findViewById(R.id.imageViewDetail);
+        ButterKnife.bind(this);
         Bundle arguments = getIntent().getExtras();
         if (arguments != null) {
             String url = arguments.get("url").toString();

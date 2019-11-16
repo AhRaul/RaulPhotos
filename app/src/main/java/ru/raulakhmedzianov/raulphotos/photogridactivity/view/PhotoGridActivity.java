@@ -62,4 +62,10 @@ public class PhotoGridActivity extends MvpAppCompatActivity implements IPhotoGri
         Log.d(TAG, "updateRecyclerView: ");
         recyclerAdapter.notifyDataSetChanged();
     }
+
+    @Override
+    public void showPhotoFromStorage(String fileName) {
+        Log.d(TAG, "showPhotoFromStorage: получение фотографии с хранилища телефона по fileName " + fileName);
+        //TODO
+    }
 }
